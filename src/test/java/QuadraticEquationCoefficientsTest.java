@@ -2,6 +2,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class QuadraticEquationCoefficientsTest {
     @org.junit.jupiter.api.Test
+    void quadraticEquation_validCoefficients_AllZero() {
+        double[] expected = new double[]{};
+        double[] actual = QuadraticEquationCoefficients.quadraticQequation(0, 0, 0);
+        assertArrayEquals(expected, actual, 0);
+    }
+
+    @org.junit.jupiter.api.Test
     void quadraticEquation_validCoefficients_TwoRoots() {
         double[] expected = new double[]{-5, -1};
         double[] actual = QuadraticEquationCoefficients.quadraticQequation(1, 6, 5);
